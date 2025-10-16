@@ -12,4 +12,21 @@ public class Sistema {
     public ArrayList<Projeto> getProjetos(){
         return projetos;
     }
+    
+    public void addProfissional(Profissional profissional){
+        profissionais.add(profissional);
+    }
+
+    public void addProjeto(Projeto projeto){
+        projetos.add(projeto);
+    }
+
+    public void removeProfissional(Profissional profissional){
+        profissionais.remove(profissional);
+    }
+    
+    public void removeProjeto(Projeto projeto){
+        projetos.remove(projeto);
+    }
+    
 }

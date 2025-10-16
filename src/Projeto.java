@@ -13,4 +13,8 @@ public abstract class Projeto {
     }
     
     public abstract void setId(int id);
+
+    public void addProfissional(Profissional profissional){
+        profissionais.add(profissional);
+    }
 }
