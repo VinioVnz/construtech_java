@@ -6,15 +6,44 @@ public abstract class Projeto {
     private LocalDate dataRegistro;
     private String descricao;
     private ArrayList<Profissional> profissionais = new ArrayList<>();
-
-    public Projeto(int id, LocalDate dataRegistro, String descricao, Profissional profissional){
-        this.id = id;
-
+    private static int contador = 1;
+    public Projeto(LocalDate dataRegistro, String descricao, Profissional profissional) {
+        setId();
+        this.dataRegistro = dataRegistro;
+        this.descricao = descricao;
+        this.profissionais.add(profissional);
     }
-    
-    public abstract void setId(int id);
 
-    public void addProfissional(Profissional profissional){
+    public void setId() {
+        id = contador++;
+    }
+
+    public void addProfissional(Profissional profissional) {
         profissionais.add(profissional);
     }
+
+    public int getId() {
+        return id;
+    }
+
+    public LocalDate getDataRegistro() {
+        return dataRegistro;
+    }
+
+    public void setDataRegistro(LocalDate dataRegistro) {
+        this.dataRegistro = dataRegistro;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
+
+    public ArrayList<Profissional> getProfissionais() {
+        return profissionais;
+    }
+
 }
